@@ -15,8 +15,43 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Products</h2>
-                {{ products }}
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        {% endblock %}
+        <div class="row">
+            {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="thumbnail">
+                        {% if product.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="product-container">
+                        <h6><strong>{{ product.name }}</strong></h6>
+                        <div class="price-and-buttons">
+                            <h4 class="price"><strong>£{{ product.price }}</strong></h4>
+                            <a class="btn btn-black btn-sm btn-view" href="{% url 'product_details' product.id %}">View</a>
+                            {% if request.resolver_match.url_name == 'products' %}
+                                {% include 'shopping_bag/add_to_shopping_bag_button_products.html' %}
+                            {% else %}
+                                {% include 'shopping_bag/add_to_shopping_bag_button.html' %}
+                            {% endif %}
+                            {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+    {% endblock %}

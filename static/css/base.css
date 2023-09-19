@@ -35,7 +35,7 @@ body {
 }
 
 .jumbotron {
-    padding: 8px 6px;
+    padding: 19px 16px;
 background-color: #f8edff;
 border-radius: 15px;
 color: #9f38f1;
@@ -68,12 +68,42 @@ margin: 9px;
     color: white;
     min-width: 260px;
 }
+.navbar {
+    background-color: #fff; 
+    padding: 10px;
+}
 
+.nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-item {
+    margin-right: 62px; /* Adjust the spacing between categories */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #7516c2; 
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #bb78e8 !important; /* Change color on hover */
+}
 .btn-black {
     background: #bb78e8;
     color: white;
 }
 
+
+.navbar-light .navbar-toggler {
+    color: #7516c2 !important;
+    border-color: #7516c2 !important;
+}
 .btn-outline-black {
     background: #bb78e8;
     color: #f8edff !important;
@@ -96,3 +126,5 @@ margin: 9px;
     background: #b05ae9;
     color: #f3e6fc;
 }
+
+

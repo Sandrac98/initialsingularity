@@ -23,7 +23,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="thumbnail">
                         {% if product.image %}
-                        <a href="">
+                        <a href="{% url 'product_details' product_id=product.id%}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
@@ -36,16 +36,11 @@
                         <h6><strong>{{ product.name }}</strong></h6>
                         <div class="price-and-buttons">
                             <h4 class="price"><strong>£{{ product.price }}</strong></h4>
-                            <a class="btn btn-black btn-sm btn-view" href="{% url 'product_details' product.id %}">View</a>
-                            {% if request.resolver_match.url_name == 'products' %}
-                                {% include 'shopping_bag/add_to_shopping_bag_button_products.html' %}
-                            {% else %}
-                                {% include 'shopping_bag/add_to_shopping_bag_button.html' %}
-                            {% endif %}
+                            <a class="btn btn-black btn-sm btn-view" href="">View</a>
                             {% if request.user.is_superuser %}
                                         <small class="ml-3">
-                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            <a href="">Edit</a> | 
+                                            <a class="text-danger" href="">Delete</a>
                                         </small>
                                     {% endif %}
                         </div>

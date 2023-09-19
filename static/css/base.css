@@ -137,3 +137,83 @@ margin: 9px;
     background: white;
     z-index: -1;
 }
+
+.product-container {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-container h6 {
+    margin-top: 10px;
+}
+
+.price-and-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 6px -7px 11px 0px rgb(188 155 209);
+}
+
+.thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+}
+
+.thumbnail a::before {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 76%;
+    background: rgba(131, 90, 129, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.thumbnail:hover a::before {
+    opacity: 1;
+}
+input[name='q']::placeholder {
+    color: #b05ae9;
+}
+
+/* Adjust button margins to align them vertically */
+.btn, .price{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+
+.product-details-container{
+    color: #b05ae9;
+    padding-top: 150px;
+}
+.product-name{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-description{
+    font-family: 'Average Sans', sans-serif;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.image-container-product-details {
+    padding-top:150px;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Hind+Madurai&family=Montserrat:wght@800&display=swap');
+html{
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 253px);
+    color: #9f38f1;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+.welcome-text{
+    color: #9f38f1;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 34px; 
+    line-height: 1.4; 
+}
+
+
+.welcome-page-button{
+    font-size: 17px;
+}
+
+.jumbotron {
+    padding: 8px 6px;
+background-color: #f8edff;
+border-radius: 15px;
+color: #9f38f1;
+font-size: 18px;  
+text-align: center; 
+margin: 9px;
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    color: #c394e1;
+}
+
+
+.logo-font {
+    text-transform: uppercase;
+    color: #c394e1;
+}
+    
+
+.header-container{
+    margin-top: 40px;
+}
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #bb78e8;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: #bb78e8;
+    color: white;
+}
+
+.btn-outline-black {
+    background: #bb78e8;
+    color: #f8edff !important;
+    font-weight: 100;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #bb78e8;
+    color: gray !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #b05ae9;
+    color: #f3e6fc;
+}

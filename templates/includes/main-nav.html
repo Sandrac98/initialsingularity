@@ -5,11 +5,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link" >
-                <a href="" class="dropdown-item" class="dropdown-item" style="color: #9f38f1;">By Price</a>
-                <a href="" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Rating</a>
-                <a href="" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" class="dropdown-item" style="color: #9f38f1;">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item" style="color: #9f38f1;">All Products</a>
-            </div>
         </li>
          
                 <li class="nav-item">

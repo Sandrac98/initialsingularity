@@ -1,0 +1,122 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Lee Know inspirational quote sticker (MATTE)",
+            "description": "Having a bad day? Take a moment to relax and live, laugh and think about Lee Know because that's the perfect solution to any problem for Stay ☺🤭 This sticker is perfect for your laptop notebook or basically any surface that's not constantly in contact with water.",
+            "price": 53.99,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/1f1edd/4081557116/il_fullxfull.4081557116_k6x3.jpg",
+            "image": "3.jpg"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad Wolf Chan (Bangchan)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/7f2ba7/4834096251/il_fullxfull.4834096251_b8mz.jpg",
+            "image": "8.jpg"
+        }
+    },
+
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad Leebit (Lee Know)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/e7f71f/4785831648/il_fullxfull.4785831648_ioxx.jpg",
+            "image": "9.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad DWAEKKI (Changbin)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/fa8759/4785831672/il_fullxfull.4785831672_9fb1.jpg",
+            "image": "10.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad Jiniret (Hyunjin)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/b7799e/4834096233/il_fullxfull.4834096233_6h7y.jpg",
+            "image": "11.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad HAN QUOKKA (Han)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/d5a970/4834096253/il_fullxfull.4834096253_ie5c.jpg",
+            "image": "12.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad BbokAri (Felix)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/274c4b/4785831670/il_fullxfull.4785831670_soex.jpg",
+            "image": "13.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad PuppyM (Seungmin)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/c921a6/4834096255/il_fullxfull.4834096255_i01c.jpg",
+            "image": "14.jpg"
+        }},
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Skzoo memo pad FoxI.Ny (I.N)",
+            "description": "Consist of 30 pages. Pages are not sticky like post-it notes, so make a fun area to scribble down phone messages, post a reminder on the fridge, slip a note into someone's lunch, use on the desk as a reminder pad, or even as a bookmark or page marker. Depending on each person's screen settings, colours may vary somewhat. There will be no refunds for small colour variations. This like all the other notepads on my shop has a hard backing so you can use it everywhere. Width: 10.cm Height: 10cm",
+            "price": 5.75,
+            "category": 2,
+            "rating": 5,
+            "image_url": "https://i.etsystatic.com/31113082/r/il/b2a00f/4834096237/il_fullxfull.4834096237_tgik.jpg",
+            "image": "15.jpg"
+            }}
+]

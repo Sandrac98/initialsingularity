@@ -36,14 +36,18 @@ body {
 
 .jumbotron {
     padding: 19px 16px;
-background-color: #f8edff;
-border-radius: 15px;
-color: #9f38f1;
-font-size: 18px;  
-text-align: center; 
-margin: 9px;
+    background-color: #f8edff;
+    border-radius: 15px;
+    color: #9f38f1;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 62%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin: 175px;
+    width: 363px;
 }
-
 .logo{
     font-family: 'Montserrat', sans-serif;
     color: #c394e1;
@@ -88,7 +92,6 @@ margin: 9px;
     text-decoration: none;
     color: #7516c2; 
     font-family: 'Hind Madurai', sans-serif;
-    font-weight: bold;
 }
 
 .nav-link:hover {
@@ -103,6 +106,12 @@ margin: 9px;
 .navbar-light .navbar-toggler {
     color: #7516c2 !important;
     border-color: #7516c2 !important;
+}
+
+/* Adjust alignment of the search input and button */
+.search-bar {
+    height: 38px;
+    margin-top: 5px;
 }
 .btn-outline-black {
     background: #bb78e8;
@@ -157,6 +166,7 @@ margin: 9px;
 .thumbnail {
     position: relative;
     overflow: hidden;
+    max-height: 250px;
 }
 
 .thumbnail img {

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load shopping_bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -58,10 +59,10 @@
                                         <p class="my-0">£{{ item.product.price}}</p>
                                     </td>
                                     <td class="py-3" style="color: #9f38f1;">
-                                        <p class="my-0">£{{  item.product.price}}</p>
+                                        <p class="my-0">£{{  item.product.price |calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'update_shopping_bag' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -120,7 +121,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_script.html' %}
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
@@ -128,18 +129,18 @@
         form.submit();
     })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/shopping_bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+// Remove item and reload on click
+$('.remove-item').click(function(e) {
+    
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove')[1];
+    var url = `/shopping_bag/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken, 'itemId': itemId};
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+    $.post(url, data)
+     .done(function() {
+         location.reload();
+     });
+});
 </script>
-
 {% endblock %}

@@ -32,6 +32,9 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
+                            <p class="mt-3 text-center text-md-left">
+                                <span class="small"><a href="{% url 'products' %}" style="color: #c394e1;">All Products</a> </span>
+                        </p>
                             {% for item in shopping_bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -42,9 +45,9 @@
                                             <img class="img-fluid rounded" src="{{ MEDIA_URL }}.noimage.png"></a>
                                             {% endif %}
                                     </td>
-                                    <td class="py-3" style="color: #9f38f1;">
+                                    <td class="py-3" >
                                         <a href="{% url 'product_details' item.product.id %}">
-                                            <p class="my-0">{{ item.product.name }}</p>
+                                            <p class="my-0" style="color: #9f38f1;">{{ item.product.name }}</p>
                                         </a>
                                         <p class="my-0 small" style="color: #c394e1;">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
@@ -63,16 +66,28 @@
                                 <td colspan="5" class="pt-5 text-right" style="color: #9f38f1;">
                                     <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4" style="color: #9f38f1;">Grand Total: £{{ grand_total|floatformat:2 }}</h4>
+                                    <h4 class="mt-4" style="color: #9f38f1;">Grand Total: £{{ grand_total|floatformat:2 }}</h4> 
+                                    <a href="{% url 'products' %}" class="btn btn-black">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href=""  class="btn btn-black">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
                                     {% if free_delivery > 0 %}
                                         <p class="mb-1" style="color: #9f38f1;">
                                             You could get free delivery by spending just <strong>£{{ free_delivery }}</strong> more!
                                         </p>
+                                      
                                     {% endif %}
                                 </td>
                             </tr>
                         </table>
-                    </div>
                 {% else %}
                     
                     <p class="lead mb-5">Your bag is empty.</p>

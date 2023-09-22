@@ -39,7 +39,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "Opps, you forgot to type something")
+                messages.error(request, "Oops, you didn't type anything!", extra_tags='error-toast')  # noqa
                 return redirect(reverse('products'))
             queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
             products = products.filter(queries)

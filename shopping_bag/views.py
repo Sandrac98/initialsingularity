@@ -41,7 +41,8 @@ def update_shopping_bag(request, item_id):
 
     if quantity > 0:
         shopping_bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')   # noqa
+        messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}', extra_tags="success-toast")   # noqa
+
     else:
         shopping_bag.pop(item_id, None)
 

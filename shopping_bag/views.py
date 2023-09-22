@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.shortcuts import HttpResponse
-from django.views.decorators.http import require_POST
+
 from products.models import Product
 from django.contrib import messages
 
@@ -16,14 +16,17 @@ def view_shopping_bag(request):
 def add_to_shopping_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
-    quantity = int(request.POST.get('quantity'))
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity', 1))
     redirect_url = request.POST.get('redirect_url')
     shopping_bag = request.session.get('shopping_bag', {})
 
     if item_id in list(shopping_bag.keys()):
         shopping_bag[item_id] += quantity
+        messages.success(request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')  # noqa
     else:
         shopping_bag[item_id] = quantity
+        messages.success(request, f'Added {product.name} to your shopping bag')
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(redirect_url)
@@ -46,7 +49,6 @@ def update_shopping_bag(request, item_id):
     return redirect(reverse('view_shopping_bag'))
 
 
-@require_POST
 def remove_from_shopping_bag(request, item_id):
     """ Remove the specified product from the shopping bag """
     try:

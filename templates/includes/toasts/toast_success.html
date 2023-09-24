@@ -42,7 +42,7 @@
                         Spend <strong>£{{ free_delivery_amount }}</strong> more to get free delivery!
                     </p>
                 {% endif %}
-                <a href="" class="btn btn-black" id="toast-button" style="padding: 10px;">
+                <a href="{% url 'checkout' %}" class="btn btn-black" id="toast-button" style="padding: 10px;">
                     <span class="text-uppercase">Secure Checkout</span>
                     <span class="icon">
                         <i class="fas fa-lock"></i>

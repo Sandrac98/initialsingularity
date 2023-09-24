@@ -78,7 +78,7 @@
        </div>
       </li>
       <li class="list-inline-item">
-        <a class="nav-link {% if grand_total %}text-info font-weight-bold{% endif %}" href="{% url 'view_shopping_bag' %}">
+        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_shopping_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg" style="color: #9f38f1;"></i></div>
                 <p class="my-0" style="color: #9f38f1;">

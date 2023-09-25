@@ -1,8 +1,12 @@
+from json import JSONDecodeError, JSONDecoder
 from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from django.conf import settings
-
+from .models import Order
+from .models import OrderLineItem
 from .forms import OrderForm
+from products.models import Product
 from shopping_bag.contexts import shopping_bag_contents
 
 import stripe
@@ -11,9 +15,51 @@ import stripe
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    shopping_bag = request.session.get('shopping_bag', {})
+
+    if request.method == 'POST':
+        shopping_bag = request.session.get('shopping_bag', {})
+
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
+            'postcode': request.POST['postcode'],
+            'country': request.POST['country'],
+        }
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save()
+            order.original_shopping_bag = JSONDecoder.dumps(shopping_bag)  # noqa
+            order.save()
+            for item_id, item_data in shopping_bag.items():
+                try:
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+
+                except Product.DoesNotExist:
+                    messages.error(request, "One of the products in your bag wasn't found in our database. Please call us for assistance!")  # noqa
+                    order.delete()  # Delete the order
+                    return redirect(reverse('view_bag'))
+
+                request.session['save_info'] = 'save-info' in request.POST
+                return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
+        else:
+            messages.error(request, 'There was an error with your form. Please double check your information.')  # noqa
+
+    else:
+        shopping_bag = request.session.get('shopping_bag', {})
+
     if not shopping_bag:
-        messages.error(request, "Oops your shopping bag is empty")
+        messages.error(request, "Oops, your shopping bag is empty.")
         return redirect(reverse('products'))
 
     current_shopping_bag = shopping_bag_contents(request)
@@ -26,8 +72,7 @@ def checkout(request):
     )
 
     if not stripe_public_key:
-        messages.warning(request,  'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request,  'Stripe public key is missing. Did you forget to set it in your environment?')  # noqa
 
     order_form = OrderForm()
     template = 'checkout/checkout.html'
@@ -35,6 +80,27 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'shopping_bag' in request.session:
+        del request.session['shopping_bag']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)

@@ -72,47 +72,73 @@ body {
     color: white;
     min-width: 260px;
 }
+
+/* Navbar */
 .navbar {
-    background-color: #fff; 
+    background-color: #fff;
     padding: 10px;
 }
 
-.nav {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    
-}
-
-.nav-item {
-    margin-right: 62px; /* Adjust the spacing between categories */
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #7516c2; 
+/* Navbar Brand */
+.navbar-brand {
+    color: #7516c2;
     font-family: 'Hind Madurai', sans-serif;
 }
 
-.nav-link:hover {
-    color: #bb78e8 !important; /* Change color on hover */
-}
-.btn-black {
-    background: #bb78e8;
-    color: white;
-}
-
-
-.navbar-light .navbar-toggler {
+/* Navbar Toggler (Hamburger Icon) */
+.navbar-toggler {
     color: #7516c2 !important;
     border-color: #7516c2 !important;
 }
 
-/* Adjust alignment of the search input and button */
-.search-bar {
+/* Navigation List */
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push navigation items to the right */
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px;
+    }
+    
+    .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    }
+    
+    .nav-item {
+    margin-right: 62px; /* Adjust the spacing between categories */
+    }
+    
+    .nav-link {
+    text-decoration: none;
+    color: #7516c2;
+    font-family: 'Hind Madurai', sans-serif;
+    }
+    
+    .nav-link:hover {
+    color: #bb78e8 !important; /* Change color on hover */
+    }
+    .btn-black {
+    background: #bb78e8;
+    color: white;
+    }
+    
+    .navbar-light .navbar-toggler {
+    color: #7516c2 !important;
+    border-color: #7516c2 !important;
+    }
+    
+    /* Adjust alignment of the search input and button */
+    .search-bar {
     height: 38px;
     margin-top: 5px;
-}
+    }
 .btn-outline-black {
     background: #bb78e8;
     color: #f8edff !important;

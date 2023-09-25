@@ -44,7 +44,7 @@ def update_shopping_bag(request, item_id):
         shopping_bag.pop(item_id, None)
 
     request.session['shopping_bag'] = shopping_bag
-    return redirect(reverse('view_shopping_bag'))
+    return redirect(reverse('shopping_bag'))
 
 
 def remove_from_shopping_bag(request, item_id):

@@ -1,28 +1,30 @@
-<div class="collapse navbar-collapse" id="main-nav">
+    <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
             <a class="logo-font nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #7516c2">
-                All Products
-            </a>
+                    All Products
+                </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link" >
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" class="dropdown-item" style="color: #9f38f1;">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item" class="dropdown-item " style="color: #9f38f1;">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item" style="color: #9f38f1;">All Products</a>
-        </li>
+                    <a href="{% url 'products' %}" class="dropdown-item" style="color: #9f38f1;">All Products</a>
+            </li>
          
-                <li class="nav-item">
-                    <a class="logo-font nav-link mr-5" href="{% url 'products' %}?category=Photocards" style="color: #7516c2;">Photocards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="logo-font nav-link" href="{% url 'products' %}?category=Stickers" style="color: #7516c2;">Stickers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="logo-font nav-link" href="{% url 'products' %}?category=Memo pads" style="color: #7516c2;">Memo pads</a>
-                </li>
-                <li class="nav-item">
-                    <a class="logo-font nav-link" href="{% url 'products' %}?category=Prints" style="color: #7516c2;">Prints</a>
-                </li>
-            </ul>
-    </ul>
-</div>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'products' %}?category=Photocards" style="color: #7516c2;">Photocards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'products' %}?category=Stickers" style="color: #7516c2;">Stickers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'products' %}?category=Memo pads" style="color: #7516c2;">Memo pads</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'products' %}?category=Prints" style="color: #7516c2;">Prints</a>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>

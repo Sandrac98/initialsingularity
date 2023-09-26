@@ -1,4 +1,3 @@
-from json import JSONDecodeError, JSONDecoder
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
@@ -10,6 +9,7 @@ from products.models import Product
 from shopping_bag.contexts import shopping_bag_contents
 
 import stripe
+import json
 
 
 def checkout(request):
@@ -32,7 +32,7 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            order.original_shopping_bag = JSONDecoder.dumps(shopping_bag)  # noqa
+            order.original_shopping_bag = json.dumps(shopping_bag)  # noqa
             order.save()
             for item_id, item_data in shopping_bag.items():
                 try:

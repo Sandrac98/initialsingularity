@@ -1,14 +1,13 @@
-import uuid
-
+import random
+import string
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-
 from products.models import Product
 
 
 class Order(models.Model):
-    order_number = models.CharField(max_length=32, null=False, editable=False)
+    order_number = models.CharField(max_length=32, null=False, editable=False, unique=True)  # noqa
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -20,13 +19,22 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)  # noqa
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)   # noqa
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)  # noqa
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID
+        Generate a random, unique order number
         """
-        return uuid.uuid4().hex.upper()
+        # Generate a random order number using digits and uppercase letters
+        max_length = 32
+        characters = string.digits + string.ascii_uppercase
+        order_number = ''.join(random.choice(characters) for _ in range(max_length))  # noqa
+
+        # Check if the generated order number is unique; if not, regenerate
+        while Order.objects.filter(order_number=order_number).exists():
+            order_number = ''.join(random.choice(characters) for _ in range(max_length))  # noqa
+
+        return order_number
 
     def update_total(self):
         """

@@ -351,3 +351,92 @@ input[name='q']::placeholder {
 }
 
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+ 
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 194px;
+      }
+  }
+  
+  @media (min-width:300px) and (max-width:914px) {
+      body {
+          background: url('/media/mobile-background.jpg') no-repeat center center fixed;
+          background-size: cover;
+          height: calc(80vh - 90px);
+          color: #9f38f1;
+          font-family: 'Hind Madurai', sans-serif;
+      } 
+      .header-container {
+          padding-top: 160px;
+      }
+  
+      .welcome-text {
+      padding-top: 1px;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 30px;
+      font-size: 30px;
+      line-height: 55px;
+      }
+  
+      .welcome-page-button{
+          font-size: 17px;
+      }
+  
+      .jumbotron {
+          padding: 8px 6px;
+          background-color: #f8edff;
+          border-radius: 15px;
+          color: #9f38f1;
+          font-size: 'Average Sans', sans-serif;
+          margin: 9px;
+      }
+      
+      .logo-font {
+          text-transform: uppercase;
+          font-size: 28px ;
+      }
+      .shop-now-button {
+          background: #bb78e8;
+          color: white;
+          min-width: 136px;
+      }
+  
+      .delivery-banner {
+          font-size: 18px;
+      }
+  
+      .navbar {
+          font-size:0.8rem;
+      }
+      .navbar button{
+          font-size:16px;
+  
+      }
+  
+      .navbar-nav {
+          .nav-link {
+              font-size:14px;
+          }
+      }
+      
+  
+  }

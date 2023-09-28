@@ -1,3 +1,25 @@
+.order-confirmation-wrapper {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(242, 113, 247, 0.425);
+}
+.order-confirmation-wrapper img {
+  max-width: 100px;
+  height: auto;
+}
+.welcome-page-button {
+  background-color: #ff5733;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+}
+
+.custom-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;

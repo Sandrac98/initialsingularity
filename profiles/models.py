@@ -10,12 +10,12 @@ class UserProfile(models.Model):
     """A profile model designed to manage default shipping details
       and track order history."""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    defaul_phone_number = models.CharField(max_length=20, null=True, blank=True)  # noqa
-    defaul_street_address1 = models.CharField(max_length=80, null=True, blank=True)  # noqa
-    defaul_street_address1 = models.CharField(max_length=80, null=True, blank=True)  # noqa
-    defaul_town_or_city = models.CharField(max_length=40, null=True, blank=True)  # noqa
-    defaul_postcode = models.CharField(max_length=20, null=True, blank=True)
-    defaul_country = CountryField(max_length=20, null=True, blank=True)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)  # noqa
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)  # noqa
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)  # noqa
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)  # noqa
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank=True)
 
     def __str__(self):
         return self.user.username

@@ -268,37 +268,45 @@ input[name='q']::placeholder {
     padding-top:150px;
 }
 
-/* ------------------------------- bootstrap toasts */
-
-.messages-container {
+/* Common styles for both toasts */
+.toast-notification {
     position: fixed;
-    top: 72px;
-    right: 15px;
+    top: 60px;
+    right: 20px;
     z-index: 99999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
-
-.custom-toast {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-/* Style for the button inside the toast */
-.custom-toast .btn {
-    padding-top: 10px;
-    background-color: #9f38f1;
-    color: #ffffff;
+/* Styles for the close button in both toasts */
+.toast-notification .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
 }
+
+.toast-notification .close:hover {
+    opacity: 1;
+}
+
+/* Additional styles for toast content */
+.toast-body {
+    padding: 10px;
+}
+.toast-footer {
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {

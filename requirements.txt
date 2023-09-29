@@ -3,7 +3,7 @@ boto3==1.28.57
 botocore==1.31.57
 chardet==3.0.4
 crispy-bootstrap4==2022.1
-Django==4.2.5
+Django==3.2
 django-allauth==0.45.0
 dj_database_url==2.1.0
 django-crispy-forms==2.0

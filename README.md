@@ -1,7 +1,7 @@
 # INITIAL SINGULARITY.
-Initial Singularity is not just another shop; it's a creation born out of pure fandom and dedication. For fans, by a fan, every product is lovingly crafted at home by the owner. Drawing inspiration from the captivating world of K-Pop (Korean Pop Music), Initial Singularity aims to bridge the gap caused by the expensive prices of official merchandise, making it affordable for every K-Pop enthusiast out there.
+Welcome to Initial Singularity – more than just a shop, it's a creation born out of pure fandom and dedication. For fans, by a fan, every product is lovingly crafted at home by the owner. Drawing inspiration from the captivating world of K-Pop (Korean Pop Music), Initial Singularity aims to bridge the gap caused by the expensive prices of official merchandise, making it affordable for every K-Pop enthusiast out there.
 
-At Initial Singularity, we understand the magic of being a fan, and we want to enhance that experience by offering affordable and high-quality products that celebrate the K-Pop culture. Join us in our journey as we create a community of passionate fans who wear their love for K-Pop with pride.
+At Initial Singularity, I understand the magic of being a fan, and I want to enhance that experience by offering affordable and high-quality products that celebrate the K-Pop culture. Join me on this journey as we create a community of passionate fans who wear their love for K-Pop with pride!
 
 [View deployed site here] ()
 ![Responsice Mockup]()

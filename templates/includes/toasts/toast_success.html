@@ -22,9 +22,9 @@
             <div class="col-3 my-1">
                 <a href="{% url 'product_details' item.product.id %}">
                     {% if item.product.image %}
-                    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}"></a>
+                    <img class="img-fluid rounded" src="{{ item.product.image.url }}"></a>
                     {% else %}
-                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}.noimage.png" alt="{{ item.product.name }}"></a>
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}.noimage.png"></a>
                     {% endif %}
             </div>
             <div class="col-9">

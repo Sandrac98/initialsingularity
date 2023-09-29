@@ -1,108 +1,67 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# INITIAL SINGULARITY.
+Initial Singularity is not just another shop; it's a creation born out of pure fandom and dedication. For fans, by a fan, every product is lovingly crafted at home by the owner. Drawing inspiration from the captivating world of K-Pop (Korean Pop Music), Initial Singularity aims to bridge the gap caused by the expensive prices of official merchandise, making it affordable for every K-Pop enthusiast out there.
 
-Welcome USER_NAME,
+At Initial Singularity, we understand the magic of being a fan, and we want to enhance that experience by offering affordable and high-quality products that celebrate the K-Pop culture. Join us in our journey as we create a community of passionate fans who wear their love for K-Pop with pride.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View deployed site here] ()
+![Responsice Mockup]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+The goals of this website are:
+* Showcase and Sell Products: 
+      The primary goal of the website is to serve as an online platform to showcase and sell the handcrafted products inspired by K-Pop. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* Provide Product Information: 
+      Each product have a detailed descriptions, high-quality images, and customer reviews to give potential buyers a clear understanding 
+      of what they're purchasing. This information helps build trust and encourages users to make informed decisions.
 
-`python3 -m http.server`
+* Implement Secure Payment Processing:
+      As the website handles financial transactions, ensuring a secure payment gateway is of utmost importance. It builds trust and reassures 
+      customers that their personal and financial information is protected.
 
-A blue button should appear to click: _Make Public_,
+* Provide Customer Support:
+      Includes a dedicated section for customer support, where users can find answers to common queries or reach out for assistance regarding their orders.
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# UX
+## Ideal client
+### The ideal visitor for this website is:
+ 
+* K-Pop Enthusiasts: The website is specifically designed for individuals who are passionate about K-Pop and have a deep interest in the Korean pop music culture. These fans are likely to be familiar with various K-Pop artists, groups, and trends.
 
-A blue button should appear to click: _Make Public_,
+* Affordable Merchandise Seekers: The website caters to fans who appreciate high-quality, handcrafted products inspired by K-Pop but may find official merchandise to be too expensive. These visitors are looking for affordable alternatives without compromising on the fandom experience.
 
-Another blue button should appear to click: _Open Browser_.
+* Frequent Online Shoppers: The ideal visitor is likely to be comfortable with online shopping and enjoys browsing and purchasing products from e-commerce platforms. They are tech-savvy and expect a smooth, user-friendly online shopping experience.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* International Audience: As K-Pop has a global following, the website should appeal to fans from various countries and cultures who share a common interest in Korean pop music.
 
-To log into the Heroku toolbelt CLI:
+* Value-Conscious Buyers: The ideal visitor appreciates the value of handcrafted products and seeks to support independent creators while obtaining products that fit their budget.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Overall, the ideal visitor for the Initial Singularity website is a dedicated K-Pop enthusiast who is looking for an affordable and community-driven shopping experience, accompanied by unique and high-quality products inspired by their favorite music genre.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Client stories
 
-------
+1. As a K-Pop fan, I want to explore a wide range of handcrafted products inspired by my favorite K-Pop artists, so I can find unique and affordable merchandise to express my fandom with pride.
 
-## Release History
+2. As a new visitor to the website, I want a user-friendly interface that allows me to easily navigate through different collections, so I can quickly find and purchase the products that resonate with my fandom.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+3. As an international fan, I want to have a seamless shopping experience with various shipping options and transparent international shipping costs, so I can confidently order products from anywhere in the world.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+4. As a customer, I want to feel confident about the security of my personal and financial information during the checkout process, knowing that the website uses secure payment processing to protect my data.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Features 
+## Existing Features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Features Left to Implement
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Testing 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## User Stories Testing
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Manual Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Deployment
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Media

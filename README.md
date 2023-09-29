@@ -63,5 +63,3 @@ Overall, the ideal visitor for the Initial Singularity website is a dedicated K-
 ## Manual Testing
 
 # Deployment
-
-## Media

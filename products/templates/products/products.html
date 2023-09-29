@@ -66,8 +66,8 @@
                             <a class="btn btn-black btn-sm btn-view" href="{% url 'product_details' product_id=product.id%}">View</a>
                             {% if request.user.is_superuser %}
                                         <small class="ml-3">
-                                            <a href="">Edit</a> | 
-                                            <a class="text-danger" href="">Delete</a>
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
                                     {% endif %}
                         </div>

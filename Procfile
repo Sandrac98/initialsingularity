@@ -1,0 +1,1 @@
+web: gunicorn initialsingularity.wsgi:application

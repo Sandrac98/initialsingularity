@@ -78,9 +78,9 @@ def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            new_product = form.save()
             messages.success(request, 'Successfully added a new product!')
-            return redirect(reverse('product_details', args=[product.id]))
+            return redirect(reverse('product_details', args=[new_product.id]))
         else:
             messages.error(request,
                            'Failed to add a new product. Please make sure the form is valid')  # noqa

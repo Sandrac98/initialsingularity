@@ -69,9 +69,6 @@ body {
     width: fit-content;
 }
 
-
-
-
 .btn-outline-black {
     background: #bb78e8;
     color: #f8edff !important;
@@ -94,7 +91,6 @@ body {
     background: #b05ae9;
     color: #f8edff;
 }
-
 
 .overlay {
     height: 100%;
@@ -325,9 +321,9 @@ input[name='q']::placeholder {
     margin-top: 5px;
     }
 .shopping-bag-container {
-    padding-top: 26px;
+    padding-top: 38px;
     width: 97%;
-    margin-left: 8px;
+    margin-left: 0px;
 }
     body {
         font-size: 16px;
@@ -439,7 +435,7 @@ input[name='q']::placeholder {
         padding: .375rem .75rem;
         font-size: 1rem;
         line-height: 1.5;
-        border-radius: 10px;
+        border-radius: 5px;
         user-select: none; /* Standard property with fallback value */
 
         /* standard bootstrap btn transitions */

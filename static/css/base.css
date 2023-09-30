@@ -48,6 +48,7 @@ body {
     margin: 175px;
     width: 363px;
 }
+
 .logo{
     font-family: 'Montserrat', sans-serif;
     color: #c394e1;
@@ -69,11 +70,7 @@ body {
 }
 
 
-/* Adjust alignment of the search input and button */
-    .search-bar {
-    height: 38px;
-    margin-top: 5px;
-    }
+
 
 .btn-outline-black {
     background: #bb78e8;
@@ -303,14 +300,30 @@ input[name='q']::placeholder {
     margin-right: 140px;
 }
 
-@media (min-width: 300px) and (max-width: 914px){
-
+@media (min-width: 270px) and (max-width: 653px) {
+    .checkout-container{
+        margin: 20px;
+        padding-top: 173px;
+    }
+    .shopping-bag-container {
+        padding-top: 26px;
+        width: 97%;
+        padding-left: 8px;
+    }
 }
+
 /* Media Query for screens smaller than 768px (e.g., mobile devices) */
-@media (max-width: 767px) {    
+@media (min-width: 300px) and (max-width: 767px) {    
     .header-container {
     padding-top: 67px;
 }
+.delvery-banner h4 {
+    font-size: 15px;
+}
+.dropdown-menu border{
+    height: 38px;
+    margin-top: 5px;
+    }
 .shopping-bag-container {
     padding-top: 26px;
     width: 97%;
@@ -323,12 +336,22 @@ input[name='q']::placeholder {
     .logo-font {
         text-transform: uppercase;
         color: #c394e1;
-        padding-top: 19px;
     }
     .jumbotron {
     width: 100%;
-    margin: 13px;
-    padding: 12px;
+        margin: 13px;
+    }
+    .welcome-text{
+        color: #9f38f1;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        font-size: 25px; 
+        line-height: 1.4; 
+    }
+    
+    .checkout-container{
+        margin: 20px;
+        padding-top: 10px;
     }
     
     .nav {
@@ -354,7 +377,7 @@ input[name='q']::placeholder {
             display: none;
         }
         .table-responsive{
-            font-size: 19px;
+            font-size: 15px;
         }
         .product-details-container {
             color: #b05ae9;
@@ -368,7 +391,7 @@ input[name='q']::placeholder {
             line-height: 32px;
             font-size: 20px;
         }
-        .container {
+        .checkout-success-container {
             width: 97%;
             padding-right: 14px;
             padding-left: 27px;
@@ -467,6 +490,11 @@ input[name='q']::placeholder {
         left: 0;
         z-index: 1030;
     }
+    .checkout-container{
+        margin: 67px;
+        padding-top: 25px;
+    }
+    
 }
 
 /* Media Query for screens larger than 991px (e.g., desktops) */
@@ -507,6 +535,9 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+.checkout-container{
+    margin: 67px;
 }
 
 }

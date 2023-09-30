@@ -3,8 +3,9 @@ Welcome to Initial Singularity – more than just a shop, it's a creation born o
 
 At Initial Singularity, I understand the magic of being a fan, and I want to enhance that experience by offering affordable and high-quality products that celebrate the K-Pop culture. Join me on this journey as we create a community of passionate fans who wear their love for K-Pop with pride!
 
-[View deployed site here] ()
-![Responsive Mockup]()
+[View deployed site here](https://initialsingularity-9ff73d5f222f.herokuapp.com/)
+---
+![Responsive Mockup](./static/readme-images/mockup.png)
 
 ## Table of Contents
 - [About](#about)
@@ -14,6 +15,8 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
+  - [Design](#design)  
+  + [Colour Scheme](#colour-scheme)
 - [Testing](./Testing.md)
 - [Database](#Database-Schema)
 - [Deployment](#deployment)
@@ -94,6 +97,22 @@ Overall, the ideal visitor for the Initial Singularity website is a dedicated K-
 
 4. **Community Blog**: Add a blog to build a community and share K-Pop-related content.
 
+# Design
+
+## Colour Scheme.
+I have decided to go with different shades of purple since it has become associated with the K-pop industry and fan culture, but it's not inherently related to K-pop itself. Instead, the association between purple and K-pop has developed over time due to its popularity among K-pop fans and its frequent use by K-pop artists and fan communities. Here's why purple is often linked to K-pop:
+
+**Purple Hearts** :K-pop fans commonly use purple heart emojis (💜) to express their love and support for their favorite artists. The purple heart symbolizes admiration, affection, and unity within the K-pop fan community.
+
+**Fandom Colors**: Some K-pop groups have designated official fandom colors, and purple is occasionally chosen as one of these colors. When a fandom adopts purple as its color, it becomes a unifying symbol for fans to identify with.
+
+**Lightsticks and Concerts**: At K-pop concerts, fans often use lightsticks that emit purple light. These lightsticks are synchronized with the music and stage lighting, creating a visually stunning and immersive concert experience. Purple light is associated with fan enthusiasm and excitement.
+
+**Fan Art and Fan Projects**: K-pop fans create fan art, banners, and projects that prominently feature purple as a way to show support for their favorite artists. These projects are often displayed during concerts or fan events.
+
+**Social Media Trends**: Purple is a trending color on social media platforms among K-pop fans. Fans use purple-themed profile pictures, hashtags, and emojis to celebrate their favorite artists and interact with the K-pop community.
+
+![Colour Pallet](./static/readme-images/colour-pallet.png)
 # Database Schema
 
 The database for our application is structured as follows:
@@ -279,6 +298,8 @@ In the development of this project, I encountered and addressed various W3 valid
 2. Warning: Only 0 can be a unit. You must put a unit after your number: 10
    - File: base.css, Line 442
    - Description: The value '10' should have a unit specified.
+
+This errors have been fixed.
 
 ### Performance Issues
 

@@ -70,3 +70,19 @@ Initial Singularity was tested for responsiveness using the Google Chrome browse
   - Checked the structure and navigation menu functionality.
 
 
+# W3C HTML Validator
+ - Code was checked using https://validator.w3.org/ 
+
+ ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
+
+# W3C CSS Validator
+-  Code was checked using https://jigsaw.w3.org/css-validator/ 
+  
+![(Jigsaw) validator](./static/testing-images/css-validator.png)
+
+# Lighthouse score. 
+
+![Lighthouse Test](./static/testing-images/lighthouse-score.png)
+
+# JSHINT Javascript Code Quality Tool
+![jshint](./static/testing-images/jshint.png)

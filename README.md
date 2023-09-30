@@ -238,6 +238,62 @@ In the development of this project, I encountered and addressed various W3 valid
 
 ---
 
+## W3C Validation Results
+
+### HTML Validation
+
+#### Errors
+
+1. Error: Element li not allowed as a child of element nav in this context.
+   - File: index.html, Line 97
+   - Description: The <li> element is not allowed as a child of <nav>. This can cause issues with the document structure.
+   
+2. Error: Duplicate ID user-options.
+   - File: navigation.html, Line 121
+   - Description: There is a duplicate ID attribute 'user-options' in the document.
+
+#### Warnings
+
+1. Warning: Consider avoiding viewport values that prevent users from resizing documents.
+   - File: index.html, Line 11
+   - Description: The viewport value may prevent users from resizing the document. Consider adjusting it for better user experience.
+
+### CSS Validation
+
+#### Errors
+
+1. Error: Value Error - top only 0 can be a unit. You must put a unit after your number: 10
+   - File: base.css, Line 145
+   - Description: The value '10' should have a unit specified (e.g., '10px' or '10rem').
+
+2. Error: left is not a valid value for align-items.
+   - File: base.css, Line 360
+   - Description: 'left' is not a valid value for the align-items property. Use one of the valid values like 'flex-start' or 'flex-end'.
+
+#### Warnings
+
+1. Warning: Only 0 can be a unit. You must put a unit after your number: 10
+   - File: base.css, Line 414
+   - Description: The value '10' should have a unit specified.
+
+2. Warning: Only 0 can be a unit. You must put a unit after your number: 10
+   - File: base.css, Line 442
+   - Description: The value '10' should have a unit specified.
+
+### Performance Issues
+
+#### Render-Blocking Resources
+
+1. Bootstrap CDN:
+   - Transfer Size: 42.0 KiB
+   - Potential Savings: 1,690 ms
+   - Description: Consider delivering critical JS/CSS inline and deferring non-critical resources to improve page load times.
+
+2. Amazon Web Services CSS:
+   - Transfer Size: 10.7 KiB
+   - Potential Savings: 920 ms
+   - Description: Consider optimizing the delivery of CSS resources hosted on AWS for better performance.
+
 
 # Deployment
 

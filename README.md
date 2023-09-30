@@ -153,6 +153,92 @@ The database for our application is structured as follows:
    - Foreign key constraints ensure data integrity by linking related records in different tables.
    - Proper indexing is used for efficient data retrieval.
 
+
+## W3 Validation Issues
+
+In the development of this project, I encountered and addressed various W3 validation issues. Below are some of the issues that have been fixed:
+
+### 1. Viewport Value Error<a name="viewport-value-error"></a>
+
+**Error Message:** Consider avoiding viewport values that prevent users from resizing documents.
+
+**Explanation:** This error occurs in line 11, column 9 to line 11, column 95. It suggests that the viewport settings may prevent users from resizing the document.
+
+---
+
+### 2. Element li Not Allowed in nav<a name="element-li-not-allowed-in-nav"></a>
+
+**Error Message:** Element li not allowed as a child of element nav in this context.
+
+**Explanation:** This error occurs in multiple places where the `<li>` element is used within a `<nav>` element. According to HTML5 specifications, the `<li>` element is not allowed as a direct child of the `<nav>` element in this context.
+
+---
+
+### 3. Duplicate ID user-options<a name="duplicate-id-user-options"></a>
+
+**Error Message:** Duplicate ID user-options.
+
+**Explanation:** This error indicates that there are duplicate HTML elements with the same `id` attribute value "user-options." It can cause unexpected behavior when accessing elements by their `id`.
+
+---
+
+### 4. Duplicate Attribute class<a name="duplicate-attribute-class"></a>
+
+**Error Message:** Duplicate attribute class.
+
+**Explanation:** This error occurs when multiple HTML elements have duplicate `class` attributes with the same value. Duplicate attributes should be avoided to ensure clean and maintainable code.
+
+---
+
+### 5. Unclosed Elements<a name="unclosed-elements"></a>
+
+**Error Message:** End tag li seen, but there were open elements. / Unclosed element div.
+
+**Explanation:** These errors indicate that certain HTML elements (e.g., `<li>`, `<div>`) are not properly closed, resulting in unclosed elements. Properly closing elements is essential to maintain the document's structure.
+
+---
+
+### 6. Illegal Character in href Attribute<a name="illegal-character-in-href-attribute"></a>
+
+**Error Message:** Bad value /products/?category=Memo pads for attribute href on element a: Illegal character in query: space is not allowed.
+
+**Explanation:** This error points out that the `href` attribute of an anchor `<a>` element contains illegal characters, specifically spaces. URLs should not contain spaces; consider encoding them as `%20`.
+
+---
+
+### 7. Stray end tag nav<a name="stray-end-tag-nav"></a>
+
+**Error Message:** Stray end tag nav.
+
+**Explanation:** This error occurs when an `</nav>` end tag is found without a corresponding opening `<nav>` tag. It suggests that there may be issues with the nesting of HTML elements.
+
+---
+
+### 8. Unnecessary type Attribute<a name="unnecessary-type-attribute"></a>
+
+**Error Message:** The type attribute is unnecessary for JavaScript resources.
+
+**Explanation:** This warning advises that the `type` attribute is unnecessary for including JavaScript resources. The browser can typically infer the script type, so the `type` attribute can be omitted.
+
+---
+
+### 9. Unclosed div Element<a name="unclosed-div-element"></a>
+
+**Error Message:** Unclosed element div.
+
+**Explanation:** This error indicates that a `<div>` element is not properly closed. Make sure to close all `<div>` elements to maintain the structure of the HTML document.
+
+---
+
+### 10. End tag for body seen<a name="end-tag-for-body-seen"></a>
+
+**Error Message:** End tag for body seen, but there were unclosed elements.
+
+**Explanation:** This error suggests that while the end `</body>` tag is present, there are unclosed HTML elements before it. Ensure that all HTML elements are properly closed before the closing `</body>` tag.
+
+---
+
+
 # Deployment
 
 ## Heroku Deployment

@@ -243,7 +243,7 @@ input[name='q']::placeholder {
 
 /* Additional styles for toast content */
 .toast-body {
-    padding: 10px;
+    padding: 16px;
 }
 .toast-footer {
     background-color: #fff;
@@ -297,19 +297,25 @@ input[name='q']::placeholder {
 }
 
 .shopping-bag-container {
-    padding-top: 200px;
+    padding-top: 82px;
+    width: 94%;
+    margin-left: 36px;
+    margin-right: 140px;
 }
 
 @media (min-width: 300px) and (max-width: 914px){
+
+}
+/* Media Query for screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {    
     .header-container {
     padding-top: 67px;
 }
 .shopping-bag-container {
-    padding-top: 100px;
+    padding-top: 26px;
+    width: 97%;
+    padding-left: 8px;
 }
-}
-/* Media Query for screens smaller than 768px (e.g., mobile devices) */
-@media (max-width: 767px) {
     body {
         font-size: 16px;
         max-width: 100%;
@@ -426,6 +432,23 @@ input[name='q']::placeholder {
     .allauth-form-inner-content a {
         color: #17a2b8; /* text-info */
     }
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+        background-color: #bb78e8;
+        color: #f8edff;
+    }
+    
+    .btn-file input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
 }
 
 /* Media Query for screens between 768px and 991px (e.g., tablets) */
@@ -461,6 +484,8 @@ input[name='q']::placeholder {
 .btn-file {
     position: relative;
     overflow: hidden;
+    background-color: #bb78e8;
+    color: #f8edff;
 }
 
 .btn-file input[type="file"] {

@@ -9,13 +9,17 @@
     </div>
     <div class="toast-body">
         {{ message }}
+        <hr class="mt-1 mb-3">
     </div>
 </div>
 
 <!-- Shopping Bag Toast (if there are shopping bag items) -->
 {% if shopping_bag_items %}
 <div class="toast toast-notification toast-bag rounded-0 border-top-0" data-autohide="false"> 
-    <p class="logo-font bg-white py-1" style="color: #9f38f1;">Your Bag ({{ product_count }})</p>
+    <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <p class="logo-fontpy-1" style="color: #9f38f1; padding: 5px;">Your Bag ({{ product_count }})</p>
     <div class="toast-body">
         {% for item in shopping_bag_items %}
         <div class="row">
@@ -55,3 +59,27 @@
     </div>
 </div>
 {% endif %}
+
+{% block postloadjs %}
+<script>
+    // Find the toast elements
+    const successToast = document.querySelector('.toast-success');
+    const bagToast = document.querySelector('.toast-bag');
+
+    // Function to hide the success toast
+    function hideSuccessToast() {
+        successToast.style.display = 'none';
+    }
+
+    // Automatically hide the success toast after 3000 milliseconds (3 seconds)
+    setTimeout(hideSuccessToast, 3000);
+
+    // Function to hide the shopping bag toast
+    function hideBagToast() {
+        bagToast.style.display = 'none';
+    }
+
+    // Automatically hide the shopping bag toast after 3000 milliseconds (3 seconds)
+    setTimeout(hideBagToast, 3000);
+</script>
+{% endblock %}

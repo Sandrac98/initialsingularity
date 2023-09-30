@@ -1,4 +1,4 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+<div class="toast toast-notification rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-alert"></div>
     <div class="w-100 toast-capper bg-alert"></div>
     <div class="toast-header bg-white text-dark">
@@ -10,17 +10,3 @@
     <div class="toast-body bg-white">
         {{ message }}        
     </div>
-    {% block postloadjs %}
-    <script>
-        // Find the toast element
-        const toast = document.querySelector('.custom-toast');
-      
-        // Function to hide the toast
-        function hideToast() {
-          toast.style.display = 'none';
-        }
-      
-        // Automatically hide the toast after 3000 milliseconds (3 seconds)
-        setTimeout(hideToast, 3000);
-      </script>
-      {% endblock %}

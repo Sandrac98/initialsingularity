@@ -46,7 +46,7 @@
             Spend <strong>£{{ free_delivery_amount }}</strong> more to get free delivery!
         </p>
         {% endif %}
-        <a href="{% url 'checkout' %}" class="btn btn-black" id="toast-button" style="padding: 10px;">
+        <a href="{% url 'checkout' %}" class="btn btn-outline-black" id="toast-button" style="padding: 10px;">
             <span class="text-uppercase">Secure Checkout</span>
             <span class="icon">
                 <i class="fas fa-lock"></i>
@@ -55,27 +55,3 @@
     </div>
 </div>
 {% endif %}
-
-{% block postloadjs %}
-<script>
-    // Find the toast elements
-    const successToast = document.querySelector('.toast-success');
-    const bagToast = document.querySelector('.toast-bag');
-
-    // Function to hide the success toast
-    function hideSuccessToast() {
-        successToast.style.display = 'none';
-    }
-
-    // Automatically hide the success toast after 3000 milliseconds (3 seconds)
-    setTimeout(hideSuccessToast, 3000);
-
-    // Function to hide the shopping bag toast
-    function hideBagToast() {
-        bagToast.style.display = 'none';
-    }
-
-    // Automatically hide the shopping bag toast after 3000 milliseconds (3 seconds)
-    setTimeout(hideBagToast, 3000);
-</script>
-{% endblock %}

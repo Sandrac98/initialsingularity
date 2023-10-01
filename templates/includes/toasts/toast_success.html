@@ -19,7 +19,7 @@
     <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <p class="logo-fontpy-1" style="color: #9f38f1; padding: 5px;">Your Bag ({{ product_count }})</p>
+    <p class="logo-font" style="color: #9f38f1; padding:4px">Your Bag ({{ product_count }})</p>
     <div class="toast-body">
         {% for item in shopping_bag_items %}
         <div class="row">
@@ -46,7 +46,7 @@
             <span class="float-right">£{{ total|floatformat:2 }}</span>
         </p>
         {% if free_delivery_amount > 0 %}
-        <p class="mb-0 p-2 shadow-sm text-center" style="color: #9f38f1;">
+        <p class="mb-0 p-2 text-center" style="color: #9f38f1;">
             Spend <strong>£{{ free_delivery_amount }}</strong> more to get free delivery!
         </p>
         {% endif %}
@@ -60,26 +60,3 @@
 </div>
 {% endif %}
 
-{% block postloadjs %}
-<script>
-    // Find the toast elements
-    const successToast = document.querySelector('.toast-success');
-    const bagToast = document.querySelector('.toast-bag');
-
-    // Function to hide the success toast
-    function hideSuccessToast() {
-        successToast.style.display = 'none';
-    }
-
-    // Automatically hide the success toast after 3000 milliseconds (3 seconds)
-    setTimeout(hideSuccessToast, 3000);
-
-    // Function to hide the shopping bag toast
-    function hideBagToast() {
-        bagToast.style.display = 'none';
-    }
-
-    // Automatically hide the shopping bag toast after 3000 milliseconds (3 seconds)
-    setTimeout(hideBagToast, 3000);
-</script>
-{% endblock %}

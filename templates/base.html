@@ -39,6 +39,7 @@
 
         <title>Initial Singularity   {% block extra_title %}  {% endblock %}</title>
   </head>
+  
 <body>
     <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -133,18 +134,18 @@
     </div>
     {% endif %} 
 
-        {% block page_header %}
-        {% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-        {% block postloadjs %}
-        <script>
-            // Initialize Bootstrap toasts
-        $('.toast').toast('show');
-        </script>
-        {% endblock %}
+    {% block postloadjs %}
+    <script>
+        // Initialize Bootstrap toasts
+    $('.toast').toast('show');
+    </script>
+    {% endblock %}
 
         
 </body>

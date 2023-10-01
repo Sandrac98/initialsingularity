@@ -1,4 +1,4 @@
-Initial Singularity was tested for responsiveness using the Google Chrome browser,the Chrome  Developer Tools and Firefox and Developer Tools to check the different screen sizes. Additionally, the website was also tested on a Samsung Galaxy a52 5G using the Samsung internet browser. No errors were found during the testing process.
+Initial Singularity was tested for responsiveness using the Google Chrome browser, the Chrome  Developer Tools, Firefox and Developer Tools to check the different screen sizes. Additionally, the website was also tested on a Samsung Galaxy a52 5G using the Samsung internet browser. No errors were found during the testing process.
 
 - [User Stories Testing](#user-stories-testing)
 - [Manual Testing](#manual-testing)
@@ -71,7 +71,7 @@ Initial Singularity was tested for responsiveness using the Google Chrome browse
 
 
 # W3C HTML Validator
- - Code was checked using https://validator.w3.org/ I've decided to not address this errors since they don't disturb the functionality
+ - Code was checked using https://validator.w3.org/ I've decided to not address this errors since they don't disturb the functionality.
 
  ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
 

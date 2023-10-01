@@ -20,7 +20,7 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Testing](./Testing.md)
 - [Database](#Database-Schema)
 - [Deployment](#deployment)
-
+- [Media](#media)
 ## About
 
 The goals of this website are:
@@ -338,3 +338,6 @@ Deploy the App: In the "Deploy" tab, manually deploy your app by clicking the "D
 
 View Your App: Once the deployment is successful, click on the "Open App" button in the top-right corner of the Heroku dashboard to view your deployed app.
 
+## Media
+
+- All of the products images are property of Initial Singularity.

@@ -71,7 +71,7 @@ Initial Singularity was tested for responsiveness using the Google Chrome browse
 
 
 # W3C HTML Validator
- - Code was checked using https://validator.w3.org/ 
+ - Code was checked using https://validator.w3.org/ I've decided to not address this errors since they don't disturb the functionality
 
  ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
 

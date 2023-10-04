@@ -15,6 +15,7 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
+  - [Wireframes](#wireframes)
   - [Design](#design)  
   + [Colour Scheme](#colour-scheme)
 - [Testing](./Testing.md)
@@ -96,6 +97,10 @@ Overall, the ideal visitor for the Initial Singularity website is a dedicated K-
 3. **Customer Support Section**: Add a customer support section with additional resources and FAQs.
 
 4. **Community Blog**: Add a blog to build a community and share K-Pop-related content.
+
+# Wireframes
+
+[You can find the wireframes here](./docs/wireframes/wireframes.pdf)
 
 # Design
 

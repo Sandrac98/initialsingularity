@@ -9,6 +9,7 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
    - Search and Filtering: There's a search feature allowing users to search for products by name or description. Users can also filter products by category.
    - Admin Interface: Admins can view and manage orders, including order line items.
    - Stripe checkout: Users can place an order on the website using Stripe.
+
 ---
 
 [View deployed site here](https://initialsingularity-9ff73d5f222f.herokuapp.com/)
@@ -30,6 +31,8 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Database](#Database-Schema)
 - [Deployment](#deployment)
 - [Media](#media)
+
+
 ## About
 
 The goals of this website are:
@@ -55,8 +58,6 @@ The goals of this website are:
 
 * Frequent Online Shoppers: The ideal visitor is likely to be comfortable with online shopping and enjoys browsing and purchasing products from e-commerce platforms. They are tech-savvy and expect a smooth, user-friendly online shopping experience.
 
-* International Audience: As K-Pop has a global following, the website should appeal to fans from various countries and cultures who share a common interest in Korean pop music.
-
 * Value-Conscious Buyers: The ideal visitor appreciates the value of handcrafted products and seeks to support independent creators while obtaining products that fit their budget.
 
 Overall, the ideal visitor for the Initial Singularity website is a dedicated K-Pop enthusiast who is looking for an affordable and community-driven shopping experience, accompanied by unique and high-quality products inspired by their favorite music genre.
@@ -81,41 +82,49 @@ Overall, the ideal visitor for the Initial Singularity website is a dedicated K-
 
 
 ## Features 
-### Existing Features
 
-1. **User Registration and Authentication**: Users can create accounts, log in, and log out.
+**Responsive Design**: Ensuring the website is usable and looks good on various devices (desktop, tablet, mobile).
 
-2. **Product Listings**: Display a catalog of products, each with detailed descriptions, images, and prices.
+**Intuitive Navigation**: Implementing a well-structured layout with an easily accessible navigation menu, enabling users to effortlessly explore various sections of the website.
 
-3. **Product Search and Filters**: Allow users to search for products by keywords and apply filters to narrow down their choices.
+**User-Friendly Notifications**: Incorporating toast notifications that provide a seamless user experience, including informative success messages (with convenient shopping bag links when applicable), helpful info alerts, important warning notifications, and clear error messages.
 
-4. **Shopping Cart**: Users can add products to their cart, view the contents, and proceed to checkout.
+**Comprehensive Product Listings**: Displaying a comprehensive catalog of products along with an accurate product count to help users quickly find what they are looking for.
 
-5. **Checkout Process**: A step-by-step process for users to enter shipping details, select payment methods, and complete their orders.
+**Detailed Product Information**:  Presenting essential product details such as high-quality images, comprehensive descriptions, assigned categories, and transparent pricing. Additionally, including user-friendly buttons for adding items to the shopping bag or returning to the product listings page.
 
-6. **Payment Integration**: Integration with a secure payment gateway to process payments.
+ **Efficient Product Search and Filters**: Empowering users to efficiently search for products by utilizing keywords and applying various filters to refine their search results.
 
-7. **Order History**: Users can view their order history, including order number and details.
+**Streamlined Shopping Bag Functionality**: Providing users with the ability to effortlessly add products to their shopping bag, review its contents, easily remove or update items, and proceed seamlessly to the checkout process.
 
-8. **Responsive Design**: Ensuring the website is usable and looks good on various devices (desktop, tablet, mobile).
+ **Seamless Checkout Experience**: Offering users a step-by-step checkout process where they can input their shipping details, select preferred payment methods, and successfully complete their orders. Moreover, for registered users, the option to autofill the checkout form with their default delivery information from their user profile, enhancing convenience. Furthermore, secure payments through Stripe are enabled.
 
-9.  **Security Measures**: Implementation of security best practices to protect user data and payment information.
+ **Order Confirmation**: Ensuring users receive prompt order confirmation emails containing detailed order information, including a unique order number and comprehensive delivery details.
 
-10. **Navigation Menu and Layout**: A structured layout with a navigation menu for easy access to different sections of the website.
+**User Account Management**: Facilitating user registration, seamless login, and secure logout procedures to enhance user account security and convenience.
+
+**Access to Order History**:  Providing users with easy access to their comprehensive order history, allowing them to review past orders, including order numbers and specifics.
+
 
 ## Features Left to Implement
 
-1. **International Shipping Prices**: Display transparent international shipping costs.
+1. **Transparent International Shipping**: Enhance user experience with clear international shipping pricing.
 
-2. **Product Reviews**: Allow customers to leave reviews and ratings for products.
+2. **Product Reviews**: Empower customers to share their thoughts and ratings for products.
 
-3. **Customer Support Section**: Add a customer support section with additional resources and FAQs.
+3. **Customer Support Hub**: Create a dedicated space for customer support, complete with valuable resources and frequently asked questions.
 
-4. **Community Blog**: Add a blog to build a community and share K-Pop-related content.
+4. **Community Blog**: Foster a sense of community and provide a platform for sharing engaging K-Pop content.
+
+5. **Newsletter Subscription**: Seamlessly incorporate a newsletter subscription form.
+
+6. **Wishlist**: Implement an exclusive wishlist feature for registered users.
+
 
 # Wireframes
 
 [You can find the wireframes here](./docs/wireframes/wireframes.pdf)
+
 
 # Design
 
@@ -132,7 +141,9 @@ I have decided to go with different shades of purple since it has become associa
 
 **Social Media Trends**: Purple is a trending color on social media platforms among K-pop fans. Fans use purple-themed profile pictures, hashtags, and emojis to celebrate their favorite artists and interact with the K-pop community.
 
-![Colour Pallet](./static/readme-images/colour-pallet.png)
+![Colour Pallet](./docs/readme-images/colour-pallet.png)
+
+
 # Database Schema
 
 The database for our application is structured as follows:
@@ -147,7 +158,6 @@ The database for our application is structured as follows:
         - `username`: User's username (unique).
         - `email`: User's email address (unique).
         - `password_hash`: Hashed password for authentication.
-        - `created_at`: Timestamp of user registration.
 
 ### 2. Products
 
@@ -168,7 +178,6 @@ The database for our application is structured as follows:
         - `user_id` (Foreign Key): References the user who placed the order.
         - `order_date`: Date and time of the order.
         - `total_amount`: Total order amount.
-        - `payment_method`: Payment method used for the order.
 
 ### 4. OrderItems
 
@@ -191,6 +200,8 @@ The database for our application is structured as follows:
    - Usernames and email addresses in the Users table are unique to ensure no duplicate user accounts.
    - Foreign key constraints ensure data integrity by linking related records in different tables.
    - Proper indexing is used for efficient data retrieval.
+
+![Database Schema](./docs/readme-images/database-schema.png)
 
 
 ## W3 Validation Issues
@@ -335,28 +346,13 @@ This errors have been fixed.
    - Potential Savings: 920 ms
    - Description: Consider optimizing the delivery of CSS resources hosted on AWS for better performance.
 
-
 # Deployment
 
-## Heroku Deployment
+Please read the development information [here](docs/DEPLOYMENT.md)
 
-This application can be easily deployed to Heroku using the following steps:
+# Testing
 
-Create a Heroku Account: If you don't have one already, sign up for a free Heroku account.
-
-Install Heroku CLI: Install the Heroku CLI on your local machine to interact with Heroku from the command line.
-
-Fork this Repository: Fork this repository to your GitHub account by clicking the "Fork" button at the top-right corner of this page.
-
-Create a New Heroku App: Log in to your Heroku account and create a new app from the Heroku dashboard. Choose a unique name for your app.
-
-Connect GitHub Repository: In the "Deploy" tab of your Heroku app dashboard, under the "Deployment method" section, select "GitHub" as the deployment method. Connect your forked repository by searching for its name.
-
-Configure Environment Variables: In the "Settings" tab of your Heroku app dashboard, click on the "Reveal Config Vars" button. Add any necessary environment variables used in your application.
-
-Deploy the App: In the "Deploy" tab, manually deploy your app by clicking the "Deploy Branch" button under the "Manual deploy" section. This will deploy the latest version of your app from the main branch.
-
-View Your App: Once the deployment is successful, click on the "Open App" button in the top-right corner of the Heroku dashboard to view your deployed app.
+Please read the testing information [here](docs/Testing.md)
 
 ## Media
 

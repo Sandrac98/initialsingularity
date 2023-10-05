@@ -3,6 +3,14 @@ Welcome to Initial Singularity – more than just a shop, it's a creation born o
 
 At Initial Singularity, I understand the magic of being a fan, and I want to enhance that experience by offering affordable and high-quality products that celebrate the K-Pop culture. Join me on this journey as we create a community of passionate fans who wear their love for K-Pop with pride!
 
+
+* Key features
+   - User Authentication and Profiles: Users can create accounts, log in, and log out. Users have access to their order history, and they can view details of past orders.
+   - Search and Filtering: There's a search feature allowing users to search for products by name or description. Users can also filter products by category.
+   - Admin Interface: Admins can view and manage orders, including order line items.
+   - Stripe checkout: Users can place an order on the website using Stripe.
+---
+
 [View deployed site here](https://initialsingularity-9ff73d5f222f.herokuapp.com/)
 ---
 ![Responsive Mockup](./static/readme-images/mockup.png)
@@ -15,8 +23,8 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
-  - [Wireframes](#wireframes)
-  - [Design](#design)  
+- [Wireframes](#wireframes)
+- [Design](#design)  
   + [Colour Scheme](#colour-scheme)
 - [Testing](./Testing.md)
 - [Database](#Database-Schema)
@@ -55,14 +63,21 @@ Overall, the ideal visitor for the Initial Singularity website is a dedicated K-
 
 ### Client stories
 
-1. As a K-Pop fan, I want to explore a wide range of handcrafted products inspired by my favorite K-Pop artists, so I can find unique and affordable merchandise to express my fandom with pride.
-
-2. As a new visitor to the website, I want a user-friendly interface that allows me to easily navigate through different collections, so I can quickly find and purchase the products that resonate with my fandom.
-
-3. As an international fan, I want to have a seamless shopping experience with various shipping options and transparent international shipping costs, so I can confidently order products from anywhere in the world.
-
-4. As a customer, I want to feel confident about the security of my personal and financial information during the checkout process, knowing that the website uses secure payment processing to protect my data.
-
+| User Story ID | As a | I want to... | So that I can... |
+|---------------|------|--------------|-------------------|
+| 1             | New User | Create an account | Save my profile information. |
+| 2             | Registered User | Log in securely | Perform actions such as adding products to my shopping bag and placing orders. |
+| 3             | User | View a list of available products | Browse through the different products |
+| 4             | User | Click on a product | See its detailed description, price, and image for a better understanding before making a purchase decision. |
+| 5             | User | Search for specific products | Quickly find items I'm interested in. |
+| 6             | User | Filter products | Find products more easily by categories, sort criteria, and sorting order. |
+| 7             | User | Add products to my shopping bag | Specify the quantity and see the total price of items in my shopping bag. |
+| 8             | User | View and manage the contents of my shopping bag | Adjust item quantities, remove items, or proceed to checkout. |
+| 9             | User | Proceed through a secure and intuitive checkout process | Provide necessary shipping and payment information before finalizing my order. |
+| 10            | User | View a history of my previous orders | See order details |
+| 11            | Registered User | Manage my profile information | Update contact details and default shipping address. |
+| 12            | Admin User | Add, edit, and delete products from the catalog | Keep the product listings up-to-date and accurate. |
+| 13            | Admin User | View and manage orders | Update order details and product quantity |
 
 
 ## Features 

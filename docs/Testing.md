@@ -7,22 +7,27 @@ Initial Singularity was tested for responsiveness using the Google Chrome browse
 - [Lighthouse](#lighthouse-score)
 - [User Stories Testing](#user-stories-testing)
 - [Manual Testing](#manual-testing)
-- [Automated Test](#automated-test)
-- [Unfixed Bugs](#unfixed-bugs)
+- [Automated Testing](#automated-testing)
 
 # Code Validation
 
 ## W3C HTML Validator
  - Code was checked using https://validator.w3.org/ 
- ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
+
+ ![W3C HTML Validator](./testing-images/html-validator.png)
 
 ## W3C CSS Validator
 -  Code was checked using https://jigsaw.w3.org/css-validator/ 
   
-![(Jigsaw) validator](./static/testing-images/css-validator.png)
+![(Jigsaw) validator](./testing-images/css-validator.png)
 
 ## JSHINT Javascript Code Quality Tool
-![jshint](./static/testing-images/jshint.png)
+![jshint](./testing-images/jshint.png)
+
+
+# Lighthouse score. 
+
+![Lighthouse Test](./testing-images/lighthouse-score.png)
 
 ## User Stories Testing
 
@@ -97,7 +102,5 @@ I've conducted tests for views, forms, and models, and you can locate these test
 ---
 ![checkout test](./testing-images/checkout_tests.png)
 
-# Lighthouse score. 
 
-![Lighthouse Test](./static/testing-images/lighthouse-score.png)
-
+Back to [README.md](/README.md#testing)

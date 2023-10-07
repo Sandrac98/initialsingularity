@@ -27,8 +27,8 @@ At Initial Singularity, I understand the magic of being a fan, and I want to enh
 - [Wireframes](#wireframes)
 - [Design](#design)  
   + [Colour Scheme](#colour-scheme)
-- [Testing](./Testing.md)
-- [Database](#Database-Schema)
+- [Testing](#testing)
+- [Database](#database-schema)
 - [Deployment](#deployment)
 - [Media](#media)
 

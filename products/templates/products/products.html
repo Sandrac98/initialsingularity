@@ -1,3 +1,4 @@
+User
 {% extends "base.html" %}
 {% load static %}
 
@@ -45,9 +46,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                {% for product in products %}
+                <div class="row">
+            {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="thumbnail">
                         {% if product.image %}
@@ -60,66 +60,62 @@
                         </a>
                         {% endif %}
                     </div>
-                </div>
-                <div class="product-container">
-                    <h6><strong>{{ product.name }}</strong></h6>
-                    <div class="price-and-buttons">
-                        <h4 class="price"><strong>£{{ product.price }}</strong></h4>
-                        <form method="POST" action="{% url 'add_to_shopping_bag' item_id=product.id %}">
-                            {% csrf_token %}
-                            <input type="hidden" name="quantity" value="1">
-                            <input type="hidden" name="redirect_url" value="{% url 'products' %}">
-                            <button type="submit" class="btn btn-outline-black">Add to Bag</button>
-                        </form>
-                        {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                            </small>
-                        {% endif %}
+                    <div class="product-container">
+                        <h6><strong>{{ product.name }}</strong></h6>
+                        <div class="price-and-buttons">
+                            <h4 class="price"><strong>£{{ product.price }}</strong></h4>
+                            <form method="POST" action="{% url 'add_to_shopping_bag' item_id=product.id %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="redirect_url" value="{% url 'products' %}">
+                                <button type="submit" class="btn btn-outline-black">Add to Bag</button>
+                            </form>
+                            {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-    <div class="btt-button shadow-sm rounded-0 border border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
-    </div>
-{% endblock %}
+                {% endfor %}
 
+                <div class="btt-button shadow-sm rounded-0 border border-black">
+                    <a class="btt-link d-flex h-100">
+                        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                    </a>	
+                </div>
+                {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-<script>
-    $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
-</script>
+    {% block postloadjs %}
+    {{ block.super }}
+    <script>
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+    
+    <script>
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
 
-<script>
-    $('#sort-selector').change(function() {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
 
-        var selectedVal = selector.val();
-        if(selectedVal != "reset"){
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
 
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direction);
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
 
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}

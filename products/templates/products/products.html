@@ -63,7 +63,12 @@
                         <h6><strong>{{ product.name }}</strong></h6>
                         <div class="price-and-buttons">
                             <h4 class="price"><strong>£{{ product.price }}</strong></h4>
-                            <a class="btn btn-outline-black" href="{% url 'product_details' product_id=product.id%}">View</a>
+                            <form method="POST" action="{% url 'add_to_shopping_bag' item_id=product.id %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="redirect_url" value="{% url 'products' %}">
+                                <button type="submit" class="btn btn-outline-black">Add to Bag</button>
+                            </form>
                             {% if request.user.is_superuser %}
                                         <small class="ml-3">
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 

@@ -1,13 +1,28 @@
 Initial Singularity was tested for responsiveness using the Google Chrome browser, the Chrome  Developer Tools, Firefox and Developer Tools to check the different screen sizes. Additionally, the website was also tested on a Samsung Galaxy a52 5G using the Samsung internet browser. No errors were found during the testing process.
 
+- [Code Validation](#code-validation)
+  - [W3C HTML Validator](#w3c-html-validator)
+  - [W3C CSS Validator](#w3c-css-validator)
+  - [JSHINT Javascript Code Quality Tool](#jshint-javascript-code-quality-tool) 
+- [Lighthouse](#lighthouse-score)
 - [User Stories Testing](#user-stories-testing)
 - [Manual Testing](#manual-testing)
-- [W3C HTML Validator](#w3c-html-validator) 
-- [W3C CSS Validator](#w3c-css-validator)
-- [Lighthouse](#lighthouse-score)
-- [JSHINT Javascript Code Quality Tool](#jshint-javascript-code-quality-tool)
+- [Automated Test](#automated-test)
 - [Unfixed Bugs](#unfixed-bugs)
 
+# Code Validation
+
+## W3C HTML Validator
+ - Code was checked using https://validator.w3.org/ 
+ ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
+
+## W3C CSS Validator
+-  Code was checked using https://jigsaw.w3.org/css-validator/ 
+  
+![(Jigsaw) validator](./static/testing-images/css-validator.png)
+
+## JSHINT Javascript Code Quality Tool
+![jshint](./static/testing-images/jshint.png)
 
 ## User Stories Testing
 
@@ -69,20 +84,20 @@ Initial Singularity was tested for responsiveness using the Google Chrome browse
 - **Navigation Menu and Layout**
   - Checked the structure and navigation menu functionality.
 
+# Automated testing
+I've conducted tests for views, forms, and models, and you can locate these tests in the tests.py file within the respective app's "tests" folder.
 
-# W3C HTML Validator
- - Code was checked using https://validator.w3.org/ I've decided to not address this errors since they don't disturb the functionality.
-
- ![W3C HTML Validator](./static/testing-images/html-validator-error.png)
-
-# W3C CSS Validator
--  Code was checked using https://jigsaw.w3.org/css-validator/ 
-  
-![(Jigsaw) validator](./static/testing-images/css-validator.png)
+![all tests](./testing-images/tests.png)
+---
+![home test](./testing-images/home_tests.png)
+---
+![producs test](./testing-images/products_tests.png)
+---
+![shopping bag test](./testing-images/shopping_bag_tests.png)
+---
+![checkout test](./testing-images/checkout_tests.png)
 
 # Lighthouse score. 
 
 ![Lighthouse Test](./static/testing-images/lighthouse-score.png)
 
-# JSHINT Javascript Code Quality Tool
-![jshint](./static/testing-images/jshint.png)
